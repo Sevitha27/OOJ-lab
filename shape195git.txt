@@ -1,0 +1,61 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+abstract class Shape
+{
+  int a,b;
+  Shape(int x,int y)
+  { a=x;b=y; }
+  abstract double printArea();
+}
+
+class Rectangle extends Shape
+{  
+  Rectangle(int x,int y)
+  { super(x,y); }
+
+  double printArea()
+  {
+   return a*b; 
+  }
+}
+
+class Triangle extends Shape
+{  
+  Triangle(int x,int y)
+  { super(x,y); }
+
+  double printArea()
+  {
+   return 0.5*a*b; 
+  }
+}
+
+class Circle extends Shape
+{  
+  Circle(int x)
+  { super(x,-1); }
+  double printArea()
+  {
+   return Math.PI*a*a; 
+  }
+}
+
+class week4
+{ 
+  public static void main(String args[])
+  {
+   Rectangle r1=new Rectangle(20,30);
+   Triangle t1=new Triangle(40,50);
+   Circle c1= new Circle(10);
+
+   Shape f;
+   
+   f=r1;
+   System.out.println("Rect area"+" "+f.printArea());
+   f=t1;
+   System.out.println("Triangle area"+" "+f.printArea());
+   f=c1;
+   System.out.println("Circle area"+" "+f.printArea());
+  }
+}
