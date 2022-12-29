@@ -46,7 +46,7 @@ class Cur_acct extends Account
 int penal()
 {
 double min, pen;
-System.out.println("Enter Minimum balance & penalty amount if not followed:");
+//System.out.println("Enter Minimum balance & penalty amount if not followed:");
 min=5000; pen=min*0.05;
 if(bal<min)
 {
@@ -80,7 +80,7 @@ void calc_interest()
 System.out.println("Enter Time in years and Rate of interest");
 double t=scan.nextDouble(); double r=scan.nextDouble();
 double CI = bal*Math.pow((1 + r/ 100), t);
-System.out.println("ACCOUNT BALANCE and compounding interest: "+ bal+" "+CI);
+System.out.println("ACCOUNT BALANCE and compounding interest: "+ bal+" "+CI    );
 }
 void withdrawal()
 {
